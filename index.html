@@ -28,16 +28,16 @@
   </head>
   <body>
     
-    <div class="main parallax-window" data-parallax="scroll" data-image-src="img/main-bg.jpg">
+    <div class="main">
     <div class="main-overlay"></div>
      <div class="wrapper">
       <div class="main-title">
         <h1>Добро пожаловать</h1>
-      <div class="main-line"></div>
+      <div class="main-header"></div>
       <p>Это мой первый сайт, <br> Написанный на HTML</p>
       </div>
     </div>
-    <a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
+    <a class="main-down" href="#portfolio"><i class="icon-down"></i></a>
     </div>
     
     <div class="portfolio" id="portfolio">
@@ -110,7 +110,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/parallax.min.js"></script>
     <script>
     	$(function() {
     		var link = $('a[data-toggle="modal"]');
@@ -119,23 +118,6 @@
     			var modal = $('.modal');
     			modal.find('.modal-body').load(work+'.html');
     		});
-    	});
-    </script>
-    
-    <script>
-    	$(document).ready(function() {
-    	  
-    	  // навигация - плавный скроллинг к якорю
-    	  $(".slowly").on("click", function (event) {
-    	    // отменяем стандартную обработку нажатия по ссылке
-    	    event.preventDefault();
-    	    // забираем идентификатор бока с атрибута href
-    	    var id = $(this).attr('href'),
-    	    //узнаем высоту от начала страницы до блока, на который ссылается якорь
-    	    top = $(id).offset().top;
-    	    //анимируем переход на расстояние - top за 800 мс
-    	    $('body,html').aminate({scrollTop: top}, 800);
-    	  });
     	});
     </script>
     

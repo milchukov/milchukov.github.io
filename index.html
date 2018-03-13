@@ -34,13 +34,13 @@
       <div class="introduction-title">
         <h1>Добро пожаловать</h1>
       <div class="introduction-line"></div>
-      <p>Это мой первый сайт, <br> Который я заверстал сам</p>
+      <p>Это мой первый сайт, <br> Написанный на HTML</p>
       </div>
     </div>
-    <a class="introduction-down" href="#"><i class="icon-down"></i></a>
+    <a class="introduction-down slowly" href="#portfolio"><i class="icon-down"></i></a>
     </div>
     
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="section-header">Будущее Портфолио</h2>
         <div class="row">
@@ -70,7 +70,7 @@
       <div class="container">
         <div class="row">
         <div class="col-md-3">
-          <strong>Никита Мильчуков</strong>
+          <strong>Мильчуков Никита</strong>
           <P>Разработка сайтов </br> под ключ</P>
         </div>
         <div class="col-md-6">
@@ -120,5 +120,23 @@
     		});
     	});
     </script>
+    
+    <script>
+    	$(document).ready(function() {
+    	  
+    	  // навигация - плавный скроллинг к якорю
+    	  $(".slowly").on("click", function (event) {
+    	    // отменяем стандартную обработку нажатия по ссылке
+    	    event.preventDefault();
+    	    // забираем идентификатор бока с атрибута href
+    	    var id = $(this).attr('href'),
+    	    //узнаем высоту от начала страницы до блока, на который ссылается якорь
+    	    top = $(id).offset().top;
+    	    //анимируем переход на расстояние - top за 800 мс
+    	    $('body,html').aminate({scrollTop: top}, 800);
+    	  });
+    	});
+    </script>
+    
   </body>
 </html>

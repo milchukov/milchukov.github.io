@@ -28,16 +28,16 @@
   </head>
   <body>
     
-    <div class="introduction">
-    <div class="introduction-overlay"></div>
+    <div class="main parallax-window" data-parallax="scroll" data-image-src="img/main-bg.jpg">
+    <div class="main-overlay"></div>
      <div class="wrapper">
-      <div class="introduction-title">
+      <div class="main-title">
         <h1>Добро пожаловать</h1>
-      <div class="introduction-line"></div>
+      <div class="main-line"></div>
       <p>Это мой первый сайт, <br> Написанный на HTML</p>
       </div>
     </div>
-    <a class="introduction-down slowly" href="#portfolio"><i class="icon-down"></i></a>
+    <a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
     </div>
     
     <div class="portfolio" id="portfolio">
@@ -109,7 +109,8 @@
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js" src=""></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parallax.min.js"></script>
     <script>
     	$(function() {
     		var link = $('a[data-toggle="modal"]');
